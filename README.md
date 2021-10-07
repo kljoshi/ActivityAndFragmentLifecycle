@@ -11,12 +11,13 @@ This is the fourth android project in [Udacity: Developing Android Apps with Kot
 ![Diagram of Activity Lifecycle](https://developer.android.com/codelabs/kotlin-android-training-lifecycles-logging/img/9be2255ff49e0af8.png)
 
 ----
-###General Definitions
-Visible Lifecycle: The part of the Lifecycle between onStart and onStop when the Activity is visible. 
-Focus: An Activity is said to have focus when it's the activity the user can interact with. 
-Foreground: When the activity is on screen. 
-Background: When the activity is fully off screen, it is considered in the background.
-——
+### General Definitions
+**Visible Lifecycle:** The part of the Lifecycle between onStart and onStop when the Activity is visible.
+**Focus:** An Activity is said to have focus when it's the activity the user can interact with.
+**Foreground:** When the activity is on screen.
+**Background:** When the activity is fully off screen, it is considered in the background.
+
+----
 ### Adding Log message 
 Steps:
 1. Use the log keyword ``` Log.i("MainActivity", "onCreate called") ```
