@@ -8,7 +8,7 @@ This is the fourth android project in [Udacity: Developing Android Apps with Kot
 
 ## Highlight for lesson 4:
 ### Activity Lifecycle 
-![Diagram of Activity Lifecycle] (https://developer.android.com/codelabs/kotlin-android-training-lifecycles-logging/img/9be2255ff49e0af8.png)
+![Diagram of Activity Lifecycle](https://developer.android.com/codelabs/kotlin-android-training-lifecycles-logging/img/9be2255ff49e0af8.png)
 
 ----
 ###General Definitions
