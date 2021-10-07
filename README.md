@@ -28,33 +28,49 @@ Steps:
 
 ### Lifecycle Library 
 In 2017, Google announced the lifecycle library, with the goal of simplifying working with the activity and fragment lifecycle. 
-Before the lifecycle library, the only way to interact with a fragment or activity Lifecycle was through the callback methods like onCreate, onStart, onResume and so on.   The lifecycle library introduced the Android Lifecycle as an actual object.  example: ```
+Before the lifecycle library, the only way to interact with a fragment or activity Lifecycle was through the callback methods like onCreate, onStart, onResume and so on. The lifecycle library introduced the Android Lifecycle as an actual object. 
+example:
+```
 fun onButtonClick(){
-if(this.lifecycle.currentState.isAtLeast(Lifecycle.State.STARTED)){
-// do something 
-}
+    if(this.lifecycle.currentState.isAtLeast(Lifecycle.State.STARTED)){
+    // do something 
+    }
 }
 ```
 This new object can be queried and checked for state. 
-What’s more, the lifecycle library also introduced, the LifecycleOwner interface and the LifecycleObserver interface.   LifecycleOwners are anything that has a lifecycle, activities and fragments are prefect example of LifecycleOwners.
+
+What’s more, the lifecycle library also introduced, the LifecycleOwner interface and the LifecycleObserver interface. 
+
+LifecycleOwners are anything that has a lifecycle, activities and fragments are prefect example of LifecycleOwners.
 
 LifecycleObservers observers the life cycle of the a lifecycle owner, such as an activity. 
-——
-### Lifecycle Observation 
-####Observer Pattern This is a software design pattern that involves an object called the subject, which keeps track of a list of other objects called observers. 
 
-The observers are said to be watching or observing the subject. When the state of the subject changes, it notifies its list of all observers.   Example of lifecycle library can be used to change the responsibility of starting and stopping the timer for the activity to the dessertTimer class. 
+----
+### Lifecycle Observation 
+#### Observer Pattern
+This is a software design pattern that involves an object called the subject, which keeps track of a list of other objects called observers. 
+
+The observers are said to be watching or observing the subject. When the state of the subject changes, it notifies its list of all observers. 
+Example of lifecycle library can be used to change the responsibility of starting and stopping the timer for the activity to the dessertTimer class. 
 
 Steps:
-1. Make DessertTimer a LifecycleObserver: In order to achieve this, DessertTimer should implement a LifecycleObserver, take in a Lifecycle as a parameter and establish observer relationship in init block. ``` class DessertTimer(lifecycle: Lifecycle) : LifecycleObserver {
+1. Make DessertTimer a LifecycleObserver:
+In order to achieve this, DessertTimer should implement a LifecycleObserver, take in a Lifecycle as a parameter and establish observer relationship in init block.
+```class DessertTimer(lifecycle: Lifecycle) : LifecycleObserver {
     init {
         lifecycle.addObserver(this)
-    } } ```
-2. Annotate startTimer and stopTimer with @OnLifecycleEvent and the correct event: ``` @OnLifecycleEvent(Lifecycle.Event.ON_START)
+    }
+   }
+```
+2. Annotate startTimer and stopTimer with @OnLifecycleEvent and the correct event:
+```
+@OnLifecycleEvent(Lifecycle.Event.ON_START)
 fun startTimer() {...}
 
 @OnLifecycleEvent(Lifecycle.Event.ON_STOP)
-fun stopTimer() {...} ``` 3. Pass in 'this' MainActivity's lifecycle so that it is observed: ``` dessertTimer = DessertTimer(this.lifecycle) ``` ——
+fun stopTimer() {...}
+```
+3. Pass in 'this' MainActivity's lifecycle so that it is observed: ``` dessertTimer = DessertTimer(this.lifecycle) ``` ——
 ### Android Debug Bridge (ADB)
 It’s a command-line tool that lets you send instruction to emulators and devices. 
 Adding ADB to your path: 1. When you enter “add” in the terminal. And you see the message “command not found”. Follow step 2.  2. Find the platform-tools folder which contains adb. 
