@@ -23,7 +23,9 @@ This is the fourth android project in [Udacity: Developing Android Apps with Kot
 ----
 ### Adding Log message 
 Steps:
-1. Use the log keyword ``` Log.i("MainActivity", "onCreate called") ```
+1. Use the log keyword
+```Log.i("MainActivity", "onCreate called")```
+
 ### Lifecycle Library 
 In 2017, Google announced the lifecycle library, with the goal of simplifying working with the activity and fragment lifecycle. 
 Before the lifecycle library, the only way to interact with a fragment or activity Lifecycle was through the callback methods like onCreate, onStart, onResume and so on.   The lifecycle library introduced the Android Lifecycle as an actual object.  example: ```
