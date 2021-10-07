@@ -9,7 +9,8 @@ This is the fourth android project in [Udacity: Developing Android Apps with Kot
 ## Highlight for lesson 4:
 ### Activity Lifecycle 
 ![Diagram of Activity Lifecycle] (https://developer.android.com/codelabs/kotlin-android-training-lifecycles-logging/img/9be2255ff49e0af8.png)
-——
+
+----
 ###General Definitions
 Visible Lifecycle: The part of the Lifecycle between onStart and onStop when the Activity is visible. 
 Focus: An Activity is said to have focus when it's the activity the user can interact with. 
