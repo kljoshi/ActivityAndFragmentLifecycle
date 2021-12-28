@@ -1,4 +1,4 @@
-# ActivityAndFragmentLifecycle
+# ActivityAndFragmentLifecycle - Lesson 4
 ## Lesson 4: Activity And Fragment Lifecycle
 This is the fourth android project in [Udacity: Developing Android Apps with Kotlin course.](https://classroom.udacity.com/courses/ud9012)
 - Basic understanding of Activity and fragment lifecycle 
